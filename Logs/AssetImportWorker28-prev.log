@@ -9,19 +9,13 @@ C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker1
+AssetImportWorker28
 -projectPath
 C:/Users/User/OneDrive - St. Lawrence College/GAME312/Bobblehead Wars
 -logFile
-Logs/AssetImportWorker1.log
+Logs/AssetImportWorker28.log
 -srvPort
 56865
 Successfully changed project path to: C:/Users/User/OneDrive - St. Lawrence College/GAME312/Bobblehead Wars
 C:/Users/User/OneDrive - St. Lawrence College/GAME312/Bobblehead Wars
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 10861.76 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.3.17f1 (a4537701e4ab)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/User/OneDrive - St. Lawrence College/GAME312/Bobblehead Wars/Assets
-GfxDevice: creating device client; threaded=0
