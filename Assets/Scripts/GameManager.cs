@@ -66,6 +66,13 @@ public class GameManager : MonoBehaviour
                                 GameObject newAlien = Instantiate(alien) as GameObject;
 
                                 newAlien.transform.position = spawnLoction.transform.position;
+
+                                Alien alienScript = newAlien.GetComponent<Alien>();
+                                alienScript.target = player.transform;
+
+                                Vector3 targetRotation = new Vector3(player.transform.x,
+                                    newAlien.transform.position.y, player.transform.position.z);
+                                newAlien.transform.LookAt(targetRotation);
                             }
                        
                         }
