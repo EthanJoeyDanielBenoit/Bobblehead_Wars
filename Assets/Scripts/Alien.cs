@@ -13,7 +13,7 @@ public class Alien : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        agent.destination = target.position; 
+        agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame

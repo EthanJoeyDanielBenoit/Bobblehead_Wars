@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
                                 Alien alienScript = newAlien.GetComponent<Alien>();
                                 alienScript.target = player.transform;
 
-                                Vector3 targetRotation = new Vector3(player.transform.x,
+                                Vector3 targetRotation = new Vector3(player.transform.position.x,
                                     newAlien.transform.position.y, player.transform.position.z);
                                 newAlien.transform.LookAt(targetRotation);
                             }

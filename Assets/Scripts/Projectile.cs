@@ -5,16 +5,6 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
-    private void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Destroy(gameObject);
-    }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +15,15 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(gameObject);
     }
 }
