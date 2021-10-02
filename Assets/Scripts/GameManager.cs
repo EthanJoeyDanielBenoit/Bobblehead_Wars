@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     private int aliensOnScreen = 0;
     private float generatedSpawnTime = 0;
     private float currentSpawnTime = 0;
+    public Animator bodyAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -40,47 +41,52 @@ public class GameManager : MonoBehaviour
                 if (aliensPerSpawn > spawnPoints.Length)
                 {
                     aliensPerSpawn = spawnPoints.Length - 1;
-                    aliensPerSpawn = (aliensPerSpawn > totalAliens) ?
-                        aliensPerSpawn - totalAliens : aliensPerSpawn;
+           
+                }
 
-                    for (int i = 0; i < aliensPerSpawn; i++)
+                aliensPerSpawn = (aliensPerSpawn > totalAliens) ?
+                     aliensPerSpawn - totalAliens : aliensPerSpawn;
+
+                for (int i = 0; i < aliensPerSpawn; i++)
+                {
+                    if (aliensOnScreen < maxAlienOnScreen)
                     {
-                       if (aliensOnScreen < maxAlienOnScreen)
+                        aliensOnScreen += 1;
+
+                        int spawnPoint = -1;
+
+                        while (spawnPoint == -1)
                         {
-                            aliensOnScreen += 1;
+                            int randomNumber = Random.Range(0, spawnPoints.Length - 1);
 
-                            int spawnPoint = -1;
-
-                            while (spawnPoint == -1)
+                            if (!previousSpawnLocations.Contains(randomNumber))
                             {
-                                int randomNumber = Random.Range(0, spawnPoints.Length - 1);
-
-                                if (!previousSpawnLocations.Contains(randomNumber))
-                                {
-                                    previousSpawnLocations.Add(randomNumber);
-                                    spawnPoint = randomNumber;
-                                }
-
-                                GameObject spawnLoction = spawnPoints[spawnPoint];
-
-                                GameObject newAlien = Instantiate(alien) as GameObject;
-
-                                newAlien.transform.position = spawnLoction.transform.position;
-
-                                Alien alienScript = newAlien.GetComponent<Alien>();
-                                alienScript.target = player.transform;
-
-                                Vector3 targetRotation = new Vector3(player.transform.position.x,
-                                    newAlien.transform.position.y, player.transform.position.z);
-                                newAlien.transform.LookAt(targetRotation);
+                                previousSpawnLocations.Add(randomNumber);
+                                spawnPoint = randomNumber;
                             }
-                       
-                        }
-                    }
 
+                            GameObject spawnLoction = spawnPoints[spawnPoint];
+
+                            GameObject newAlien = Instantiate(alien) as GameObject;
+
+                            newAlien.transform.position = spawnLoction.transform.position;
+
+                            Alien alienScript = newAlien.GetComponent<Alien>();
+                            alienScript.target = player.transform;
+
+                            Vector3 targetRotation = new Vector3(player.transform.position.x,
+                                newAlien.transform.position.y, player.transform.position.z);
+                            newAlien.transform.LookAt(targetRotation);
+                        }
+
+                    }
                 }
             }
 
         }
+
+        bodyAnimator.SetBool("IsMoving", false);
+
+        bodyAnimator.SetBool("IsMoving", true);
     }
 }
