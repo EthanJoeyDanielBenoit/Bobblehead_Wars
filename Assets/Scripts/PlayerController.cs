@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody head;
     public LayerMask layermask;
     private Vector3 currentlookTarget = Vector3.zero;
+    public Animator bodyAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -52,8 +53,14 @@ public class PlayerController : MonoBehaviour
 
                     transform.rotation = Quaternion.Lerp(transform.rotation,
                         rotation, Time.deltaTime * 10.0f);
+
+                    bodyAnimator.SetBool("IsMoving", false);
+
+                    bodyAnimator.SetBool("IsMoving", true);
                 }
             }
         }
+
+       
     }
 }
