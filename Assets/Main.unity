@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 282840813}
   - component: {fileID: 282840811}
   - component: {fileID: 282840812}
+  - component: {fileID: 282840815}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -454,6 +455,20 @@ Transform:
   m_Father: {fileID: 1022295748}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: -45, z: 0}
+--- !u!114 &282840815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282840810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efe26825c6d3b24aac340ea97076054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDecay: 0.02
+  intensity: 0.3
 --- !u!1 &305381155 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100078, guid: 7f78b096b427d419f9918e4ae4fc4aec,
@@ -870,6 +885,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   bodyAnimator: {fileID: 0}
+  hitForce:
+  - 0.1
+  - 0.2
+  - 0.3
+  timeBetweenHits: 2.5
+  marineBody: {fileID: 0}
 --- !u!143 &818664941
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1552,6 +1573,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   bodyAnimator: {fileID: 1088439148}
+  hitForce: []
+  timeBetweenHits: 2.5
+  marineBody: {fileID: 1088439145}
 --- !u!95 &1088439148
 Animator:
   serializedVersion: 3
@@ -1667,6 +1691,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &1088439150
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088439144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.08
+  m_Height: 0.24
+  m_Direction: 1
+  m_Center: {x: -1.61, y: 3.58, z: 0}
 --- !u!1 &1136595716
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,6 +2467,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1803822112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803822108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b945137f64748d340abbe8f49f252745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destructTime: 3
 --- !u!1001 &2010059284
 PrefabInstance:
   m_ObjectHideFlags: 0
