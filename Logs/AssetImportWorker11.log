@@ -9,17 +9,17 @@ C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker2
+AssetImportWorker11
 -projectPath
 C:/Users/User/OneDrive - St. Lawrence College/GAME312/Bobblehead Wars
 -logFile
-Logs/AssetImportWorker2.log
+Logs/AssetImportWorker11.log
 -srvPort
-59387
+53685
 Successfully changed project path to: C:/Users/User/OneDrive - St. Lawrence College/GAME312/Bobblehead Wars
 C:/Users/User/OneDrive - St. Lawrence College/GAME312/Bobblehead Wars
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 4751.23 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1744.58 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.17f1 (a4537701e4ab)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Resources/UnitySubsystems
@@ -31,9 +31,3 @@ Direct3D:
     Vendor:   
     VRAM:     128 MB
     Driver:   9.17.10.4459
-Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56724
-Begin MonoManager ReloadAssembly

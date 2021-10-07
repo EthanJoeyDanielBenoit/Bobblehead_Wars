@@ -9,13 +9,13 @@ C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker1
+AssetImportWorker12
 -projectPath
 C:/Users/User/OneDrive - St. Lawrence College/GAME312/Bobblehead Wars
 -logFile
-Logs/AssetImportWorker1.log
+Logs/AssetImportWorker12.log
 -srvPort
-59387
+53685
 Successfully changed project path to: C:/Users/User/OneDrive - St. Lawrence College/GAME312/Bobblehead Wars
 C:/Users/User/OneDrive - St. Lawrence College/GAME312/Bobblehead Wars
 Using Asset Import Pipeline V2.
