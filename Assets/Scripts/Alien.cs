@@ -46,7 +46,6 @@ public class Alien : MonoBehaviour
         head.GetComponent<SphereCollider>().enabled = true;
         head.gameObject.transform.parent = null;
         head.velocity = new Vector3(0, 26.0f, 3.0f);
-
         OnDestroy.Invoke();
         OnDestroy.RemoveAllListeners();
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.alienDeath);
@@ -61,6 +60,15 @@ public class Alien : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public DeathParticles GetDeathParticles()
+    {
+        if (deathParticles = null)
+        {
+            deathParticles = GetComponentsInChildren<DeathParticles>();
+        }
+        return deathParticles;
+    }
+
     void OnTriggerEnter(Collider other)
     {
 
@@ -72,12 +80,5 @@ public class Alien : MonoBehaviour
         }
     }
 
-    public DeathParticles GetDeathParticles()
-    {
-        if (deathParticles = null)
-        {
-            deathParticles = GetComponentsInChildren<DeathParticles>();
-        }
-        return deathParticles;
-    }
+    
 }
